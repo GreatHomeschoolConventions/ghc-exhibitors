@@ -28,7 +28,7 @@
             // set variables
             var pricingGeneral = [525, 500, 475, 450],
                 pricingDiscount = [475, 450, 425, 400],
-                discount = new Date() <= new Date('2017-006-03 23:59:59'),
+                discount = new Date() <= new Date('2017-06-03 23:59:59'),
                 depositDeadline = new Date() <= new Date('2017-12-15 23:59:59'),
                 deposit = $('input[name="payment-option"]').val(),
                 locationQuantity = $('input[name="locations[]"]:checked').length,
