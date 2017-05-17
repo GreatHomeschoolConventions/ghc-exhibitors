@@ -63,6 +63,17 @@
             }
         }
 
+        // show/hide payment fields
+        $('input[name="payment-method"]').on('change', function() {
+            if ($(this).val().indexOf('online via credit card') > -1) {
+                $('.online-payment').slideDown();
+                $('.offline-payment').slideup();
+            } else {
+                $('.online-payment').slideUp();
+                $('.offline-payment').slideDown();
+            }
+        });
+
         // re-enable disabled fields prior to form submission
         $('form.wpcf7-form').on('submit', function(){
             $('input[disabled]').attr('disabled', false);
