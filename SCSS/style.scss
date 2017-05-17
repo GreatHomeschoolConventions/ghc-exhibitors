@@ -4228,6 +4228,10 @@ object {
     margin: 0 0.33em;
 }
 
+.wpcf7[id*="wpcf7-f147"] label[for^="expiration-"] {
+    display: none;
+}
+
 .wpcf7-form-control-signature-wrap {
     border: 1px solid #bbb;
     border-radius: 3px;
