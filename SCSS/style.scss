@@ -4221,3 +4221,16 @@ object {
 .wpcf7-list-item-label {
     font-weight: normal;
 }
+
+.wpcf7[id*="wpcf7-f147"] input[type="number"] {
+    width: 7em;
+    display: inline-block;
+    margin: 0 0.33em;
+}
+
+.wpcf7-form-control-signature-wrap {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
