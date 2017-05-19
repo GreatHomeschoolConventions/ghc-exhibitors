@@ -47,7 +47,7 @@
             $('.online-payment').slideUp();
             $('.offline-payment').slideDown();
         }
-    });
+    };
 
     /**
      * Update payment info
