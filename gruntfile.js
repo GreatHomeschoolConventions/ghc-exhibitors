@@ -51,7 +51,7 @@ module.exports = function (grunt) {
             },
             options: {
                 watchTask: true,
-                proxy: "https://exhibitors.ghc.dev",
+                proxy: "https://ex.ghc.dev",
                 https: {
                     key: "/Users/andrew/github/dotfiles/local-dev.key",
                     cert: "/Users/andrew/github/dotfiles/local-dev.crt",
