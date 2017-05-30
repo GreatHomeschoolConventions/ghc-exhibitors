@@ -20,7 +20,7 @@
         });
 
         // handle changes
-        $('input.quantity-by-convention, input[name="locations[]"], input[name="quantity"], input[name="payment-option"]').on('change', updatePaymentInfo);
+        $('input.quantity-by-convention, input[name="locations[]"], input[name^="quantity"], input[name="payment-option"]').on('change', updatePaymentInfo);
 
         // main function
         updatePaymentInfo();
