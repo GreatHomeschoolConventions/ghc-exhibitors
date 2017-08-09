@@ -62,6 +62,11 @@
             locationQuantity = $('input[name="locations[]"]:checked').length,
             boothQuantity = 0;
 
+        // hide early-bird stuff if date is past
+        if ( ! discount ) {
+            $('.early-bird').hide();
+        }
+
         // check for deposit deadline
         if ( ! depositDeadline ) {
             $('input[name="payment-option"][value*="50%"]').parents('.wpcf7-list-item').remove();
