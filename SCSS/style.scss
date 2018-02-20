@@ -2675,6 +2675,8 @@ h2.widget-title {
 .widget_tag_cloud,
 .wp_widget_tag_cloud {
     line-height: 1.5;
+
+    li { display: inline; }
 }
 
 .widget .tagcloud a,
