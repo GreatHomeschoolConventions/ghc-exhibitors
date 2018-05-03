@@ -90,7 +90,7 @@
 
 		// Handle pluralization.
 		$('input.quantity-by-convention').on('keyup', function () {
-			$(this).next('.plural').html($(this).val() !== 1 ? 's' : '');
+			$(this).next('.plural').html($(this).val() !== "1" ? 's' : '');
 		});
 
 		// Handle changes.
