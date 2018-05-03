@@ -89,7 +89,7 @@
 		});
 
 		// Handle pluralization.
-		$('input.quantity-by-convention').on('change', function () {
+		$('input.quantity-by-convention').on('keyup', function () {
 			$(this).next('.plural').html($(this).val() !== 1 ? 's' : '');
 		});
 
