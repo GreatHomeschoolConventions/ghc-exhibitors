@@ -29,10 +29,10 @@
 	 */
 	function updatePaymentInfo() {
 		// Set variables.
-		var pricingGeneral = [525, 500, 475, 450, 450],
-			pricingDiscount = [475, 450, 425, 400, 400],
-			discount = new Date() <= new Date('2017-08-31 23:59:59'),
-			depositDeadline = new Date() <= new Date('2017-12-15 23:59:59'),
+		var pricingGeneral = [525, 510, 495, 495, 495, 495, 495],
+			pricingDiscount = [500, 475, 450, 450, 450, 450, 450],
+			discount = new Date() <= new Date('2018-06-01 23:59:59'),
+			depositDeadline = new Date() <= new Date('2018-12-15 23:59:59'),
 			locationQuantity = $('input[name="locations[]"]:checked').length,
 			boothQuantity = 0,
 			boothPricingIndex = 0,
