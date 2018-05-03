@@ -38,6 +38,9 @@ module.exports = function (grunt) {
 		}
 	},
 	uglify: {
+		options: {
+			sourceMap: true,
+		},
 		custom: {
 			files: {
 				'js/application-form-pricing.min.js': 'js/application-form-pricing.js'
