@@ -31,7 +31,7 @@
 		// Set variables.
 		var pricingGeneral = [525, 510, 495, 495, 495, 495, 495],
 			pricingDiscount = [500, 475, 450, 450, 450, 450, 450],
-			discount = new Date() <= new Date('2018-06-01 23:59:59'),
+			discount = new Date() <= new Date('2018-06-18 23:59:59'),
 			depositDeadline = new Date() <= new Date('2018-12-15 23:59:59'),
 			locationQuantity = $('input[name="locations[]"]:checked').length,
 			boothQuantity = 0,
