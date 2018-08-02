@@ -1,18 +1,21 @@
 /**
- * Exhibitor application form pricingGeneral-
+ * Exhibitor application form pricing
  *
  * @package GHC-Exhibitors
  */
 
-/*global document, jQuery */
+/* global document, jQuery */
 
-(function ($) {
-	"use strict";
+'use strict';
+
+(function($) {
 
 	/**
 	 * Show/hide payment fields as necessary
 	 *
-	 * @param {object} input selected or changed radio button
+	 * @param {Object} input selected or changed radio button.
+	 *
+	 * @returns {void} Modifies DOM.
 	 */
 	function handlePaymentFields(input) {
 		if (input.val().indexOf('online via credit card') > -1) {
@@ -26,8 +29,11 @@
 
 	/**
 	 * Update payment info
+	 *
+	 * @returns {void} Modifies DOM.
 	 */
 	function updatePaymentInfo() {
+
 		// Set variables.
 		var pricingGeneral = [525, 510, 495, 495, 495, 495, 495],
 			pricingDiscount = [500, 475, 450, 450, 450, 450, 450],
@@ -50,7 +56,7 @@
 		}
 
 		// Count up number of total booths.
-		$('.locations input[name*="quantity"]').each(function () {
+		$('.locations input[name*="quantity"]').each(function() {
 			boothQuantity += Number($(this).val());
 		});
 
@@ -73,14 +79,15 @@
 		}
 	}
 
-	$(document).ready(function () {
+	$(document).ready(function() {
+
 		// Set up form.
 		$('.wpcf7-form-control-wrap.locations label[for*="quantity"]').hide();
 		$('input[name="quantity"], input[name="total-amount"], input[name="todays-payment"]').attr('disabled', true);
 		$('span.todays-payment').append('<span class="small"> (automatically calculated)</span>');
 
 		// Show/hide individual booth quantities.
-		$('input[name="locations[]"]').on('change', function () {
+		$('input[name="locations[]"]').on('change', function() {
 			if ($(this).is(':checked')) {
 				$(this).parents('.wpcf7-list-item').find('label.quantity').show().find('input').val(1);
 			} else {
@@ -89,8 +96,8 @@
 		});
 
 		// Handle pluralization.
-		$('input.quantity-by-convention').on('keyup', function () {
-			$(this).next('.plural').html($(this).val() !== "1" ? 's' : '');
+		$('input.quantity-by-convention').on('keyup', function() {
+			$(this).next('.plural').html($(this).val() !== '1' ? 's' : '');
 		});
 
 		// Handle changes.
@@ -104,7 +111,7 @@
 		handlePaymentFields($('input[name="payment-method"]:checked'));
 
 		// Re-enable disabled fields prior to form submission.
-		$('form.wpcf7-form').on('submit', function () {
+		$('form.wpcf7-form').on('submit', function() {
 			$('input[disabled]').attr('disabled', false);
 		});
 	});
